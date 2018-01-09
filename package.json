@@ -1,6 +1,6 @@
 {
   "name": "react-native-safe-area-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module for measuring react-native safe area sizes",
   "main": "lib/SafeAreaHelper.js",
   "files": [
