@@ -1,0 +1,28 @@
+{
+  "name": "react-native-safe-area-helper",
+  "version": "1.0.0",
+  "description": "Module for measuring react-native safe area sizes",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boltss/react-native-safe-area-helper.git"
+  },
+  "keywords": [
+    "react-native",
+    "safearea",
+    "padding",
+    "helper",
+    "safe",
+    "area",
+    "react"
+  ],
+  "author": "Bolt <hi@bolt.ee>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/boltss/react-native-safe-area-helper/issues"
+  },
+  "homepage": "https://github.com/boltss/react-native-safe-area-helper#readme"
+}
