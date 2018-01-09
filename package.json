@@ -2,9 +2,16 @@
   "name": "react-native-safe-area-helper",
   "version": "1.0.0",
   "description": "Module for measuring react-native safe area sizes",
-  "main": "src/SafeAreaHelper.js",
+  "main": "lib/SafeAreaHelper.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:clean": "rm -rf lib",
+    "build": "babel src -d lib",
+    "build:flowtype": "flow-copy-source src lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build:clean && npm run build && npm run build:flowtype"
   },
   "repository": {
     "type": "git",
@@ -19,17 +26,24 @@
     "area",
     "react"
   ],
-  "author": "Bolt <hi@bolt.ee> (https://bolt.ee)",
+  "author": {
+    "name": "Bolt",
+    "email": "hi@bolt.ee",
+    "url": "https://bolt.ee"
+  },
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/boltss/react-native-safe-area-helper/issues"
   },
   "homepage": "https://github.com/boltss/react-native-safe-area-helper#readme",
-  "dependencies": {
-    "react": "16.2.0",
-    "react-native": "0.52.0"
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   },
   "devDependencies": {
-    "flow-bin": "0.63.1"
+    "babel-cli": "6.26.0",
+    "babel-preset-react-native": "4.0.0",
+    "flow-bin": "0.63.1",
+    "flow-copy-source": "1.2.1"
   }
 }

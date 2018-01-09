@@ -8,7 +8,7 @@ import {
 import { type SafeAreaInsets } from '../SafeAreaHelper'
 
 
-function getInsetFromSafeAreaLayout({
+export function getInsetFromSafeAreaLayout({
 	x: leftInset,
 	y: topInset,
 	width: viewWidth,
@@ -30,6 +30,4 @@ function getInsetFromSafeAreaLayout({
 	}
 }
 
-export default {
-	getInsetFromSafeAreaLayout,
-}
+export default {}

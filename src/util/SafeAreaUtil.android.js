@@ -7,7 +7,7 @@ import {
 import { type SafeAreaInsets } from '../SafeAreaHelper'
 
 
-function getInsetFromSafeAreaLayout(innerLayout: LayoutRectangle): SafeAreaInsets {
+export function getInsetFromSafeAreaLayout(innerLayout: LayoutRectangle): SafeAreaInsets {
 	// TODO: once react-native supports proper safearea for android,
 	// then this condition can be removed https://github.com/facebook/react-native/issues/17371
 	return {
@@ -18,6 +18,4 @@ function getInsetFromSafeAreaLayout(innerLayout: LayoutRectangle): SafeAreaInset
 	}
 }
 
-export default {
-	getInsetFromSafeAreaLayout,
-}
+export default {}
