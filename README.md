@@ -5,6 +5,7 @@
 
 ## Introduction
 This is a simple component that lets you know what the insets/paddings for safe area are.
+Helps when adding support for iPhone X and similar devices.
 
 ## Installation
 ```bash
