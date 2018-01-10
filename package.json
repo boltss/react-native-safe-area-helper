@@ -62,6 +62,10 @@
     },
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native)"
+    ],
+    "testPathIgnorePatterns": [
+      "lib",
+      "node_modules"
     ]
   }
 }
