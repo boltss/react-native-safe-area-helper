@@ -22,11 +22,13 @@ class App extends Component {
     }
 
     render() {
-        <View>
-            ...
-            // It tries to fill the whole screen with absolute transparent view
-            <SafeAreaHelper onInsetsChange={this.onInsetsChange}
-        </View>
+        return (
+            <View>
+                ...
+                // It tries to fill the whole screen with absolute transparent view
+                <SafeAreaHelper onInsetsChange={this.onInsetsChange} />
+            </View>
+        )
     }
 }
 ```
