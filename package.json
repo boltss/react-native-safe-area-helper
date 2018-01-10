@@ -3,15 +3,13 @@
   "version": "1.0.1",
   "description": "Module for measuring react-native safe area sizes",
   "main": "lib/SafeAreaHelper.js",
-  "files": [
-    "lib"
-  ],
   "scripts": {
     "build:clean": "rm -rf lib",
     "build": "babel src -d lib",
-    "build:flowtype": "flow-copy-source src lib",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "npm run build:clean && npm run build && npm run build:flowtype"
+    "build:flow-type": "flow-copy-source src lib",
+    "test": "jest --coverage",
+    "upload:coverage-report": "cat ./coverage/lcov.info | coveralls",
+    "prepublish": "npm run build:clean && npm run build && npm run build:flow-type"
   },
   "repository": {
     "type": "git",
@@ -42,8 +40,28 @@
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
+    "babel-jest": "22.0.4",
     "babel-preset-react-native": "4.0.0",
+    "coveralls": "3.0.0",
     "flow-bin": "0.63.1",
-    "flow-copy-source": "1.2.1"
+    "flow-copy-source": "1.2.1",
+    "jest": "22.0.5",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
+    "react-test-renderer": "16.2.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "coverageThreshold": {
+      "global": {
+        "statements": 22.22,
+        "branches": 100,
+        "functions": 33.33,
+        "lines": 22.22
+      }
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native)"
+    ]
   }
 }

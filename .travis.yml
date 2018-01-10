@@ -1,3 +1,7 @@
 language: node_js
 node_js:
     - "node"
+
+# Send coverage data to Coveralls
+after_script:
+    - npm run upload:coverage-report
